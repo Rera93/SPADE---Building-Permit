@@ -1,0 +1,14 @@
+# the line above should start with the name of the table,
+# then an equal sign (=)
+# then per column: the column name, a colon (:) and the type of the column (num, str, bool, date, datetime or timestamp).
+# and of course each column is separated with a semi colon (;).
+# De lines below are the data that will be inserted in the table. All values should be enclosed using double quotes ("...") except for num and bool values. 
+# The empty or null value is represented with NULL, which should never be enclosed using double quotes.
+# Lines that start with a hash sign (#) will be ignored. Great for adding comments.
+PRODUCTS = FINALIZED:bool ;DBID:num; NAME:str           ; PRICE:num
+TRUE                      ;1       ; "iPad 1"           ; 150.45
+TRUE                      ;2       ; "iPad 2"           ; 250.45
+TRUE                      ;3       ; "iPad 3"           ; 350.45
+TRUE                      ;4       ; "iPad air"         ; 550.45
+TRUE                      ;5       ; "Samsung Galaxy S3"; 150.99
+TRUE                      ;6       ; "Samsung Galaxy S6"; 450.99

@@ -1,0 +1,19 @@
+Process 'Reusable definitions'
+
+/* THE LOGICAL DATA MODEL (textual version) */
+
+ORDERS = 
+    date: date 
+    LINES : ORDER_LINES(*) required opposite of ORDER 
+
+ORDER_LINES = 
+    PRODUCT : PRODUCTS(1) required opposite of ORDER_LINES  
+    number  : integer required  
+    ORDER   : ORDERS(1) required opposite of LINES 
+
+PRODUCTS = 
+    name        : text required 
+    price       : decimal(10,2) required 
+    ORDER_LINES : ORDER_LINES(*) opposite of PRODUCT
+    summary     : text displayed = '{name} ({price} euro)'
+

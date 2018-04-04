@@ -1,0 +1,20 @@
+{
+    "version": "0.1.0",
+    "command": "C:\\WINDOWS\\system32\\cmd.exe",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "echoCommand": true,
+    "suppressTaskName": true,
+    "tasks": [        
+        {
+            "taskName": "SPADE Generate",
+            "args": [ "/C", "${env:SPADE_HOME}\\PaGen\\PaGen.exe", "-np" 
+                    , "-o", "My_First_Webshop"
+                    , "${workspaceRoot}\\Orderproducts.spade"
+                    , "${workspaceRoot}\\Addproducts.spade"
+                    , "${workspaceRoot}\\LDM.spade"
+                    ],
+            "isBuildCommand": true
+        }
+    ]
+}
