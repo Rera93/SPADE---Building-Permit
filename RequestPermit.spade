@@ -1,0 +1,10 @@
+Process 'RequestPermit'
+
+The following applies: 
+    "civilian has requested a building permit"
+
+"civilian has requested a building permit" =
+    One PERMIT exists in PERMITS with:
+        start_date = input from CIVILIAN
+        height = input from CIVILIAN 
+

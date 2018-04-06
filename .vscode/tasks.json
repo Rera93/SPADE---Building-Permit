@@ -10,8 +10,7 @@
             "taskName": "SPADE Generate",
             "args": [ "/C", "${env:SPADE_HOME}\\PaGen\\PaGen.exe", "-np" 
                     , "-o", "My_First_Webshop"
-                    , "${workspaceRoot}\\Orderproducts.spade"
-                    , "${workspaceRoot}\\Addproducts.spade"
+                    , "${workspaceRoot}\\RequestPermit.spade"
                     , "${workspaceRoot}\\LDM.spade"
                     ],
             "isBuildCommand": true
