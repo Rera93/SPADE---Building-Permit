@@ -2,9 +2,19 @@ Process 'RequestPermit'
 
 The following applies: 
     "civilian has requested a building permit"
+    and 
+    "height has been evaluated in order to approve request or not"
 
 "civilian has requested a building permit" =
-    One PERMIT exists in PERMITS with:
+    Several PERMIT exist in PERMITS with:
         start_date = input from CIVILIAN
-        height = input from CIVILIAN 
+        height     = input from CIVILIAN 
+        approved   = false
+         
+"height has been evaluated in order to approve request or not" =
+    For each PERMIT in PERMITS[height >= 3 and height <=5] applies: 
+        PERMIT.approved = true
+
+
+
 

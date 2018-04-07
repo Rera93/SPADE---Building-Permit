@@ -3,5 +3,6 @@ Process 'Reusable definitions'
 /* THE LOGICAL DATA MODEL (textual version) */
 
 PERMITS = 
-    start_date   : date required 
-    height : integer required label 'Height (in meters)'  
+    start_date : date required 
+    height     : integer required label 'Height (in meters)'  
+    approved   : boolean required 
