@@ -12,8 +12,10 @@ The following applies:
         approved   = false
          
 "height has been evaluated in order to approve request or not" =
-    For each PERMIT in PERMITS[height >= 3 and height <=5] applies: 
-        PERMIT.approved = true
+    For each PERMIT in PERMITS applies: 
+        if PERMIT.height >= 3 and PERMIT.height <=5 
+        then PERMIT.approved = true
+        else PERMIT.approved = input from APPROVER 
 
 
 
