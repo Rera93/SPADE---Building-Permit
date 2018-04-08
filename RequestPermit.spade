@@ -6,17 +6,27 @@ The following applies:
     "height has been evaluated in order to approve request or not"
 
 "civilian has requested a building permit" =
-    Several PERMIT exist in PERMITS with:
+    One PERMIT exists in PERMITS with:
         start_date = input from CIVILIAN
         height     = input from CIVILIAN 
-        approved   = false
          
 "height has been evaluated in order to approve request or not" =
-    For each PERMIT in PERMITS applies: 
-        if PERMIT.height >= 3 and PERMIT.height <=5 
-        then PERMIT.approved = true
-        else PERMIT.approved = input from APPROVER 
+    if "the height is between 3 and 5 both inclusive"
+    then "permit can be automatically approved"
+    else "permit needs to be manually approved"
 
+"the height is between 3 and 5 both inclusive" = 
+    PERMIT.height >= 3 and PERMIT.height <=5
+
+"permit can be automatically approved" = 
+    PERMIT.approved = true 
+
+"permit needs to be manually approved" = 
+    PERMIT.approved = input from APPROVER 
+                      of type boolean 
+                      labeled 'Choice: Approve Permit?'
+                      chosen from [true, false]
+                      default false
 
 
 

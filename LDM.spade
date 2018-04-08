@@ -5,4 +5,4 @@ Process 'Reusable definitions'
 PERMITS = 
     start_date : date required 
     height     : integer required label 'Height (in meters)'  
-    approved   : boolean required 
+    approved   : boolean required
