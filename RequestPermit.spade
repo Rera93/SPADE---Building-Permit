@@ -18,20 +18,21 @@ The following applies:
          
 "height has been evaluated in order to approve request or not" =
     if "the height is between 3 and 5 both inclusive"
-    then "permit can be automatically approved"
+    then PERMIT.approved = true 
     else "permit needs to be manually approved"
 
 "the height is between 3 and 5 both inclusive" = 
     PERMIT.height >= 3 and PERMIT.height <=5
 
-"permit can be automatically approved" = 
-    PERMIT.approved = true 
+//"permit can be automatically approved" = 
+    
 
 "permit needs to be manually approved" = 
     PERMIT.approved = input from APPROVER 
                       of type boolean 
                       labeled 'Choice: Approve Permit?'
                       chosen from [true, false]
+                      based on #(CIVILIAN, PERMIT.start_date, PERMIT.height)
                       default false
 
 

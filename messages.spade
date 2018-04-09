@@ -15,8 +15,8 @@ Process 'Reusable definitions'
                                    {concat("table rows per permit request")}
                 </table>
 
-                <p> Best Regards,
-                {APPROVER.firstName} {APPROVER.lastName}(APPROVER).</p>'
+                <p> Best Regards, </p>
+                <p> {APPROVER.firstName} {APPROVER.lastName} <i>(APPROVER)</i>.</p>'
 
 "table rows per permit request" = 
     For each PERMIT in PERMITS: 
