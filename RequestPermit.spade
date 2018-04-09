@@ -15,6 +15,7 @@ The following applies:
     One PERMIT exists in PERMITS with:
         start_date = input from CIVILIAN
         height     = input from CIVILIAN 
+        civilian   = CIVILIAN.userName 
          
 "height has been evaluated in order to approve request or not" =
     if "the height is between 3 and 5 both inclusive"
