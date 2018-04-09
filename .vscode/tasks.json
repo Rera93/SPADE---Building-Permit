@@ -12,6 +12,7 @@
                     , "-o", "My_First_Webshop"
                     , "${workspaceRoot}\\RequestPermit.spade"
                     , "${workspaceRoot}\\LDM.spade"
+                    , "${workspaceRoot}\\messages.spade"
                     ],
             "isBuildCommand": true
         }

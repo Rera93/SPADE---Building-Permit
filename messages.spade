@@ -10,14 +10,14 @@ Process 'Reusable definitions'
 
                 <p> We are very happy to inform you that your building 
                 permit request has reached us. </p>
-                <p> This is what I have decided: </p> 
+                <p> This is what we have decided: </p> 
                 <table border="1"> {"table header with {['Date','Height','Approval']}"}
                                    {concat("table rows per permit request")}
                 </table>
 
                 <p> Best Regards,
-                {APPROVER.firstName} {APPROVER.lastName}.</p>'
+                {APPROVER.firstName} {APPROVER.lastName}(APPROVER).</p>'
 
 "table rows per permit request" = 
     For each PERMIT in PERMITS: 
-        "table row with{['{PERMIT.start_date}', '{PERMIT.height}', '{PERMIT.approved}']}"
+        "table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{PERMIT.approved}']}"
