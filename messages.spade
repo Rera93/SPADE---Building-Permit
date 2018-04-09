@@ -16,7 +16,7 @@ Process 'Reusable definitions'
                 </table>
 
                 <p> Best Regards, </p>
-                <p> {APPROVER.firstName} {APPROVER.lastName} <i>(APPROVER)</i>.</p>'
+                <p> <i>APPROVER</i>.</p>'
 
 "table rows per permit request" = 
     For each PERMIT in PERMITS: 
