@@ -1,10 +1,15 @@
 Process 'RequestPermit'
 
+// HIGH LEVEL REQUIREMENTS 
+
 The following applies: 
     "civilian has requested a building permit"
     and 
     "height has been evaluated in order to approve request or not"
+    //and 
+    //"civilian has received an invoice"
 
+// DETAILS OF THE REQUIREMENTS
 "civilian has requested a building permit" =
     One PERMIT exists in PERMITS with:
         start_date = input from CIVILIAN
