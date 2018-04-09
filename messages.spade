@@ -19,5 +19,5 @@ Process 'Reusable definitions'
                 <p> <i>APPROVER</i>.</p>'
 
 "table rows per permit request" = 
-    For each PERMIT in PERMITS: 
+    For each PERMIT in PERMITS[civilian == CIVILIAN.userName]: 
         "table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{PERMIT.approved}']}"
