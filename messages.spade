@@ -5,19 +5,18 @@ Process 'Reusable definitions'
 "civilian has received an invoice" =
     One INVOICE exists in MESSAGES with:
         user  = CIVILIAN
-        title = 'Your building permit request'
+        title = 'Your building permit request with date {PERMIT.start_date}'
         body  = 'Dear {CIVILIAN.firstName} {CIVILIAN.lastName},
 
                 <p> We are very happy to inform you that your building 
                 permit request has reached us. </p>
-                <p> This is what we have decided: </p> 
+                <p> This is what we have decided on your request: </p> 
+                  
                 <table border="1"> {"table header with {['Date','Height','Approval']}"}
-                                   {concat("table rows per permit request")}
+                                    {"table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{PERMIT.approved}']}"}
                 </table>
 
                 <p> Best Regards, </p>
                 <p> <i>APPROVER</i>.</p>'
 
-"table rows per permit request" = 
-    For each PERMIT in PERMITS[civilian == CIVILIAN.userName]: 
-        "table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{PERMIT.approved}']}"
+      

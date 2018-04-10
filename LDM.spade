@@ -7,3 +7,4 @@ PERMITS =
     height     : integer required label 'Height (in meters)' 
     approved   : text required
     civilian   : text required 
+    date       : date required  
