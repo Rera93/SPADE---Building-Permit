@@ -13,7 +13,7 @@ Process 'Reusable definitions'
                 <p> This is what we have decided on your request: </p> 
                   
                 <table border="1"> {"table header with {['Date','Height','Approval']}"}
-                                    {"table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{PERMIT.approved}']}"}
+                                    {"table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{PERMIT.response}']}"}
                 </table>
 
                 <p> Best Regards, </p>
