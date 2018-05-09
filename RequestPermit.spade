@@ -6,8 +6,6 @@ The following applies:
     "civilian has requested a building permit"
     and 
     "height has been evaluated in order to approve request or not"
-    and
-    "response to civilian has been determined"
     and 
     "civilian has received an invoice"
 
@@ -37,10 +35,6 @@ The following applies:
                       based on #(CIVILIAN, PERMIT.start_date, PERMIT.height)
                       default 'no'
 
-"response to civilian has been determined" = 
-    if PERMIT.approved == 'AUTO YES' or PERMIT.approved == 'YES'
-    then PERMIT.response = 'YES' 
-    else PERMIT.response = 'NO' 
 
 
 
