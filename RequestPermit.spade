@@ -6,6 +6,8 @@ The following applies:
     "civilian has requested a building permit"
     and 
     "height has been evaluated in order to approve request or not"
+    and
+    "response to civilian has been determined"
     and 
     "civilian has received an invoice"
 
@@ -25,15 +27,20 @@ The following applies:
     PERMIT.height >= 3 and PERMIT.height <=5
 
 "permit can be automatically approved" = 
-    PERMIT.approved = 'automatic yes'
+    PERMIT.approved = 'AUTO YES'
 
 "permit needs to be manually approved" = 
     PERMIT.approved = input from APPROVER 
                       of type text 
                       labeled 'Choice: Approve Permit?'
-                      chosen from ['yes', 'no']
+                      chosen from ['YES', 'NO']
                       based on #(CIVILIAN, PERMIT.start_date, PERMIT.height)
                       default 'no'
+
+"response to civilian has been determined" = 
+    if PERMIT.approved == 'AUTO YES' or PERMIT.approved == 'YES'
+    then PERMIT.response = 'YES' 
+    else PERMIT.response = 'NO' 
 
 
 
