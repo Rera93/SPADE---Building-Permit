@@ -6,3 +6,4 @@ PERMITS =
     start_date : date required 
     height     : integer required label 'Height (in meters)' 
     approved   : text required  
+    blueprint  : binary required label 'Building\'s blueprint'
