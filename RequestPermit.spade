@@ -8,6 +8,8 @@ The following applies:
     "height has been evaluated in order to approve request or not"
     and 
     "civilian has received an invoice"
+    and 
+    "civilian has received a PDF format document" 
 
 // DETAILS OF THE REQUIREMENTS
 
