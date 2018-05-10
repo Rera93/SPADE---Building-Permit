@@ -40,7 +40,7 @@ The following applies:
 
 "civilian has received a PDF format document" =  
     One PDF_FILE exists in DOCUMENTS with:
-        name = 'Building Permit with start date {PERMIT.start_date}.pdf'
+        name = "Value of parameter {'output folder'}" +'Building Permit with start date {PERMIT.start_date}.pdf'
         template = "Value of parameter {'building permit template'}"
         type = 'pdf'
         parameters = #( 'last_name' : CIVILIAN.lastName
