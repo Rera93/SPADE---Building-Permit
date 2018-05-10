@@ -38,6 +38,22 @@ The following applies:
                       based on #(CIVILIAN, PERMIT.start_date, PERMIT.height, PERMIT.blueprint)
                       default 'no'
 
+"civilian has received a PDF format document" = 
+    "PDF has been created" 
+
+"PDF has been created" = 
+    One PDF_FILE exists in DOCUMENTS with:
+        name = 'Building Permit with start date {PERMIT.start_date}.pdf'
+        template = "Value of parameter {'building permit template'}"
+        type = 'pdf'
+        parameters = #( 'last_name' : CIVILIAN.lastName
+                      , 'first_name': CIVILIAN.firstName
+                      , 'start_date': PERMIT.start_date
+                      , 'height'    : PERMIT.height
+                      , 'approval'  : PERMIT.approved 
+                      )
+
+
 
 
 
