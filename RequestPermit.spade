@@ -6,7 +6,9 @@ The following applies:
     "civilian has requested a building permit"
     and 
     "height has been evaluated in order to approve request or not"
-    and 
+    and
+    "reason on approval decision has been provided to the civilian"
+    and  
     "civilian has received an invoice"
     and 
     "civilian has received a PDF format document" 
@@ -36,19 +38,29 @@ The following applies:
                       labeled 'Choice: Approve Permit?'
                       chosen from ['YES', 'NO']
                       based on #(CIVILIAN, PERMIT.start_date, PERMIT.height, PERMIT.blueprint)
-                      default 'no'
+                      default 'NO'
+
+"reason on approval decision has been provided to the civilian" =  
+    if PERMIT.approved == 'NO'
+    then "explanation has to be provided"
+    else "congratulation message"
+
+"explanation has to be provided" =
+    PERMIT.explanation = input from APPROVER 
+                         of type text 
+                         labeled 'Provide explanation on your negative response:'
+                         based on #(CIVILIAN, PERMIT.start_date, PERMIT.height, PERMIT.blueprint, PERMIT.approved)
+                         default 'NO'
+
+"congratulation message" = 
+    PERMIT.explanation = 'We would like to congratulate you on your permit approval.' 
 
 "civilian has received a PDF format document" =  
     One PDF_FILE exists in DOCUMENTS with:
         name = 'C:/Users/Brigel/Desktop/Repositories/SPADE---Building-Permit/temp/output/Building Permit with start date {PERMIT.start_date}.pdf'
         template = 'C:/Users/Brigel/Desktop/Repositories/SPADE---Building-Permit/temp/templates/PermitResponse.docx'
         type = 'pdf'
-        parameters = #( 'last_name' : CIVILIAN.lastName
-                      , 'first_name': CIVILIAN.firstName
-                      , 'start_date': PERMIT.start_date
-                      , 'height'    : PERMIT.height
-                      , 'approval'  : PERMIT.approved 
-                      )
+        parameters = #( 'last_name': CIVILIAN.lastName, 'first_name': CIVILIAN.firstName, 'height': PERMIT.height, 'decision': if PERMIT.approved == 'NO' then 'NO' else 'YES', 'start_date': PERMIT.start_date )
      
 
 
