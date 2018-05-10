@@ -38,10 +38,7 @@ The following applies:
                       based on #(CIVILIAN, PERMIT.start_date, PERMIT.height, PERMIT.blueprint)
                       default 'no'
 
-"civilian has received a PDF format document" = 
-    "PDF has been created" 
-
-"PDF has been created" = 
+"civilian has received a PDF format document" =  
     One PDF_FILE exists in DOCUMENTS with:
         name = 'Building Permit with start date {PERMIT.start_date}.pdf'
         template = "Value of parameter {'building permit template'}"
@@ -52,6 +49,7 @@ The following applies:
                       , 'height'    : PERMIT.height
                       , 'approval'  : PERMIT.approved 
                       )
+     
 
 
 
