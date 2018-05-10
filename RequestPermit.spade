@@ -50,7 +50,6 @@ The following applies:
                          of type text 
                          labeled 'Provide explanation on your negative response:'
                          based on #(CIVILIAN, PERMIT.start_date, PERMIT.height, PERMIT.blueprint, PERMIT.approved)
-                         default 'NO'
 
 "congratulation message" = 
     PERMIT.explanation = 'We would like to congratulate you on your permit approval.' 
@@ -60,7 +59,7 @@ The following applies:
         name = 'C:/Users/Brigel/Desktop/Repositories/SPADE---Building-Permit/temp/output/Building Permit with start date {PERMIT.start_date}.pdf'
         template = 'C:/Users/Brigel/Desktop/Repositories/SPADE---Building-Permit/temp/templates/PermitResponse.docx'
         type = 'pdf'
-        parameters = #( 'last_name': CIVILIAN.lastName, 'first_name': CIVILIAN.firstName, 'height': PERMIT.height, 'decision': if PERMIT.approved == 'NO' then 'NO' else 'YES', 'start_date': PERMIT.start_date )
+        parameters = #( 'last_name': CIVILIAN.lastName, 'first_name': CIVILIAN.firstName, 'height': PERMIT.height, 'explanation': PERMIT.explanation, 'decision': if PERMIT.approved == 'NO' then 'NO' else 'YES', 'start_date': PERMIT.start_date )
      
 
 
