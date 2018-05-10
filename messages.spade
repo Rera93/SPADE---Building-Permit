@@ -16,6 +16,8 @@ Process 'Reusable definitions'
                                     {"table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{if PERMIT.approved == 'AUTO YES' or PERMIT.approved == 'YES' then 'YES' else 'NO'}']}"}
                 </table>
 
+                <p> {PERMIT.explanation} </p>
+
                 <p> Best Regards, </p>
                 <p> <i>APPROVER</i>.</p>'
 
