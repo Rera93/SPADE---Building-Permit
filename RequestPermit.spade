@@ -11,7 +11,9 @@ The following applies:
     and  
     "civilian has received an invoice"
     and 
-    "civilian has received a PDF format document" 
+    "pdf format document has been generated" 
+    and 
+    "civilian has received an email with pdf attachment"
 
 // DETAILS OF THE REQUIREMENTS
 
@@ -54,7 +56,7 @@ The following applies:
 "congratulation message" = 
     PERMIT.explanation = 'We would like to congratulate you on your permit approval.' 
 
-"civilian has received a PDF format document" =  
+"pdf format document has been generated" =  
     One PDF_FILE exists in DOCUMENTS with:
         name = 'C:/Users/Brigel/Desktop/Repositories/SPADE---Building-Permit/temp/output/Building Permit with start date {PERMIT.start_date}.pdf'
         template = 'C:/Users/Brigel/Desktop/Repositories/SPADE---Building-Permit/temp/templates/PermitResponse.docx'
