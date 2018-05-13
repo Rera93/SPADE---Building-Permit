@@ -5,20 +5,31 @@ Process 'Reusable definitions'
 "civilian has received an invoice" =
     One INVOICE exists in MESSAGES with:
         user  = CIVILIAN
-        title = 'Your building permit request with date {PERMIT.start_date}'
-        body  = 'Dear {CIVILIAN.firstName} {CIVILIAN.lastName},
+        title = "title"
+        body  = "body"
 
-                <p> We are very happy to inform you that your building 
-                permit request has reached us. </p>
-                <p> This is what we have decided on your request: </p> 
+"civilian has received an email with pdf attachment" = 
+    One EMAIL exists in MAILS with:
+        from    = 'no_reply@cgi.com'
+        to      = CIVILIAN.email
+        subject = "title"
+        body    = "body"
+
+"body" = 'Dear {CIVILIAN.firstName} {CIVILIAN.lastName},
+
+         <p> We are very happy to inform you that your building 
+         permit request has reached us. </p>
+         <p> This is what we have decided on your request: </p> 
                   
-                <table border="1"> {"table header with {['Date','Height','Approval']}"}
-                                    {"table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{if PERMIT.approved == 'AUTO YES' or PERMIT.approved == 'YES' then 'YES' else 'NO'}']}"}
-                </table>
+         <table border="1"> {"table header with {['Date','Height','Approval']}"}
+                            {"table row with {['{PERMIT.start_date}', '{PERMIT.height}', '{if PERMIT.approved == 'AUTO YES' or PERMIT.approved == 'YES' then 'YES' else 'NO'}']}"}
+         </table>
 
-                <p> {PERMIT.explanation} </p>
+         <p> {PERMIT.explanation} </p>
 
-                <p> Best Regards, </p>
-                <p> <i>APPROVER</i>.</p>'
+         <p> Best Regards, </p>
+         <p> <i>APPROVER</i>.</p>'
+
+"title" = 'Your building permit request with date {PERMIT.start_date}'
 
       
