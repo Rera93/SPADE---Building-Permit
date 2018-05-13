@@ -59,12 +59,14 @@ The following applies:
         name = 'C:/Users/Brigel/Desktop/Repositories/SPADE---Building-Permit/temp/output/Building Permit with start date {PERMIT.start_date}.pdf'
         template = 'C:/Users/Brigel/Desktop/Repositories/SPADE---Building-Permit/temp/templates/PermitResponse.docx'
         type = 'pdf'
-        parameters = #('last_name'  : CIVILIAN.lastName, 
+        parameters = #(
+                       'last'       : CIVILIAN.firstName, 
                        'first_name' : CIVILIAN.firstName,
                        'start_date' : PERMIT.start_date, 
                        'height'     : PERMIT.height, 
                        'explanation': PERMIT.explanation, 
-                       'decision'   : if PERMIT.approved == 'NO' then 'NO' else 'YES')
+                       'decision'   : if PERMIT.approved == 'NO' then 'NO' else 'YES'
+                       )
      
 
 
