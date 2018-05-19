@@ -10,10 +10,11 @@ Process 'Reusable definitions'
 
 "civilian has received an email with pdf attachment" = 
     One EMAIL exists in MAILS with:
-        from    = 'no_reply@cgi.com'
-        to      = CIVILIAN.email
-        subject = "title"
-        body    = "body"
+        from        = 'no_reply@cgi.com'
+        to          = CIVILIAN.email
+        subject     = "title"
+        body        = "body"
+        attachments = [PDF_FILE]
 
 "body" = 'Dear {CIVILIAN.firstName} {CIVILIAN.lastName},
 
@@ -32,4 +33,5 @@ Process 'Reusable definitions'
 
 "title" = 'Your building permit request with date {PERMIT.start_date}'
 
-      
+
+          
