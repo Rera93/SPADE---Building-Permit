@@ -7,4 +7,4 @@ PERMITS =
     height     : integer required label 'Height (in meters)' 
     approved   : text required  
     blueprint  : binary required label 'Building\'s blueprint'
-    explanation: text required
+    explanation: text required 
