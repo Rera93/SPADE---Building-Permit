@@ -52,7 +52,7 @@ The following applies:
     PERMIT.explanation = input from APPROVER 
                          of type text 
                          labeled 'Provide explanation on your negative response:'
-                         based on #(CIVILIAN, PERMIT.start_date, PERMIT.height, PERMIT.blueprint, PERMIT.approved)
+                         based on #(CIVILIAN, PERMIT.request_date, PERMIT.start_date, PERMIT.height, PERMIT.blueprint, PERMIT.approved)
 
 "congratulation message" = 
     PERMIT.explanation = 'We would like to congratulate you on your permit approval.' 
