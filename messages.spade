@@ -19,7 +19,7 @@ Process 'Reusable definitions'
 "body" = 'Dear {CIVILIAN.firstName} {CIVILIAN.lastName},
 
          <p> We are very happy to inform you that your building 
-         permit request has reached us. </p>
+         permit requested on {PERMIT.request_date} has reached us. </p>
          <p> This is what we have decided on your request: </p> 
                   
          <table border="1"> {"table header with {['Date','Height','Approval']}"}
