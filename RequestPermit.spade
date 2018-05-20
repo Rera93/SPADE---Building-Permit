@@ -39,7 +39,7 @@ The following applies:
                       of type text 
                       labeled 'Choice: Approve Permit?'
                       chosen from ['YES', 'NO']
-                      based on #(CIVILIAN, PERMIT.start_date, PERMIT.height/*, PERMIT.blueprint*/)
+                      based on #(CIVILIAN, PERMIT.start_date, PERMIT.height, PERMIT.blueprint)
                       default 'NO'
 
 "reason on approval decision has been provided to the civilian" =  
